@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sandbox.candystore.batch.job01.SalesRepository">
+    <insert id="insertSales" >
+		INSERT INTO trn_sales(
+		    product_name,
+		    price,
+		    category1,
+		    category2,
+		    sales_date
+		)
+		VALUES(#{productName},#{price},#{category1},#{category2},#{salesDate});
+    </insert>
+
+</mapper>
+
