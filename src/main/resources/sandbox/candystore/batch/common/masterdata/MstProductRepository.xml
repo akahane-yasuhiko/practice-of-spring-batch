@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sandbox.candystore.batch.common.masterdata.MstProductRepository">
+    <select id="select" resultType="sandbox.candystore.batch.common.masterdata.MstProductDto">
+        SELECT
+            product_name,
+            price,
+            category1,
+            category2
+        FROM
+            mst_product
+        ORDER BY
+            product_name ASC
+    </select>
+
+</mapper>
+

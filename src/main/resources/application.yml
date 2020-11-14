@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    # H2用 ここから
+    url: jdbc:h2:./h2db/sampledb
+    initialization-mode: EMBEDDED
+    # H2用 ここまで
+
+#    # POSTGRES用 ここから
+#    driverClassName: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/candy-store
+#    username: postgres
+#    password: postgres
+#    # ALWAYSにすると毎回更新される。データ投入したい場合のみALWAYSにする
+#    initialization-mode: ALWAYS
+#    # POSTGRES用 ここまで
+
+  batch:
+    # ALWAYSにしてもすでにテーブルがあれば何もされない。常にALWAYSにする
+    initialize-schema: ALWAYS
+
+  messages:
+    basename: i18n/application-messages
+    encoding: UTF-8
+    
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    sandbox.candystore.batch.common.masterdata: trace
+    sandbox.candystore.batch.job01: trace
+    
+debug: false

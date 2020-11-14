@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sandbox.candystore.batch.common.masterdata.MstOperationDateRepository">
+
+    <select id="getOperationDate" resultType="sandbox.candystore.batch.common.masterdata.MstOperationDateDto">
+        <![CDATA[
+        SELECT
+            operation_date,
+            update_date
+        FROM
+            mst_operation_date
+        ]]>
+    </select>
+</mapper>
+
