@@ -3,14 +3,12 @@ package sandbox.candystore.batch.common.listener;
 import java.text.ParseException;
 import java.util.Collection;
 import java.util.Date;
-
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobExecutionListener;
 import org.springframework.batch.core.StepExecution;
 import org.springframework.batch.core.launch.support.ExitCodeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import lombok.extern.slf4j.Slf4j;
 import sandbox.candystore.batch.common.masterdata.MasterdataLoader;
 import sandbox.candystore.batch.common.masterdata.MstOperationDateRepository;
